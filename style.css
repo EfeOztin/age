@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+.container {
+    margin: auto;
+    padding: 20px;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    user-select: none;
+    width: 100%;
+    float: right;
+}
+
+.header a {
+    text-decoration: none !important;
+    color: white;
+    font-size: 24px;
+
+}
+
+.h-img {
+    background-image: url(logo-w.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 230px;
+    height: 60px;
+}
+
+
+.row {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    height: 100px;
+}
+
+.left {
+    width: 20%;
+    background-color: rgb(29, 29, 29);
+    height: auto;
+}
+
+.left a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: grid;
+    padding: 12px;
+    padding-left: 12px;
+}
+
+.space {
+    width: 1%;
+}
+
+.right {
+    width: 79%;
+    background-color: blueviolet;
+}
+
+.link {
+    background-color: rgb(29, 29, 29);
+    user-select: none !important;
+    display: flex;        
+    margin-top: 10px;
+}
+
+.hb-link {
+    background-color: rgb(29, 29, 29);
+    user-select: none !important;
+    display: flex;        
+    padding: 8px;
+    font-size: 24px;
+    color: white !important;
+    display: none;
+}
+.hb-link:hover {
+    background-color: rgb(39, 39, 39);
+}
+
+.hb-link i {
+    color: white !important;
+}
+
+.link i {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 12px;
+}
+.link:hover {
+    background-color: rgb(39, 39, 39);
+}
+.sub {
+    display: block;
+    padding-left: 25px;
+}
+
+.h-row {
+    display: flex;
+    width: 100%;
+}
+
+.h-left {
+    width: 80%;
+}
+
+.h-right {
+    width: 20%;
+    height: 60px;
+}
+.h-link {
+    display: block;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    padding-top: 10px;
+}
+
+.h-link:hover {
+    font-size: 30px;
+    transition: font-size 200ms;
+}
+p {
+    font-size: 18px;
+
+}
+.right h2 {
+    margin-bottom: 1px;
+}
+.m-hr {
+    margin: 0px;
+    width: 300px;
+    float: left;
+}
+
+.h-bar {
+    display: flex;
+
+}
+
+.hb-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
