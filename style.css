@@ -164,3 +164,28 @@ p {
     background-color: rgb(39, 39, 39);
     align-items: center;
 }
+.m-menu {
+    display: block;
+}
+@media screen and (max-width: 800px) {
+    body {
+        background-color: red;
+    }
+    .row {
+        display: block;
+        width: 100%;
+    }
+    .left {
+        display: none;
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+    }
+    .space {
+        width: 0%;
+    }
+    .link {
+        width: 100% !important;
+    }
+}
