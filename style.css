@@ -85,7 +85,7 @@ body {
     display: none;
 }
 .hb-link:hover {
-    background-color: rgb(39, 39, 39);
+
 }
 
 .hb-link i {
@@ -101,7 +101,7 @@ body {
     background-color: rgb(39, 39, 39);
 }
 .sub {
-    display: block;
+    display: none;
     padding-left: 25px;
 }
 
@@ -151,5 +151,16 @@ p {
 .hb-link a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 22px;
+}
+
+.bar-link {
+    margin-left: 5px;
+    padding: 15px;
+}
+
+.bar-link:hover {
+    font-size: 24px;
+    background-color: rgb(39, 39, 39);
+    align-items: center;
 }

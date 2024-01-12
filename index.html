@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
     <title>Anasafya</title>
 </head>
 
@@ -15,20 +16,22 @@
             <div class="header h-left">
                 <div class="h-img"></div>
             </div>
-            <div class="h-bar">
-                <div class="h-right">
-                    <a href="" class="h-link">İletişim</a>
-                </div>
-            </div>
+
         </div>
 
         <hr style="height: 3px; background-color: rgb(255, 255, 255);">
-        <div class="hb-link" style="text-align: center; display: block;" id="hb">
-            <a href="" onclick="menu(event)"><i style=" padding-left: 0px !important; margin-top: 5px !important;"
-                    class="bi bi-three-dots"></i>&nbsp;Menu</a>
-            <a href="">Katalog</a>
-            <a href="">İletişim</a>
-            <a href="">ABCDE</a>
+        <div class="hb-link" style="text-align: center; display: flex; justify-content: space-between;" id="hb">
+            <div style="display: flex;">
+                <a href="" onclick="menu(event)" style="align-items: center;" class="bar-link">
+                    <i class="bi bi-list"></i>&nbsp;Menu
+                </a>
+            </div>
+            
+            <div style="padding-top: 13px;">
+                <a class="bar-link" href="">Katalog</a>
+                <a class="bar-link" href="">İletişim</a>
+                <a class="bar-link" href="">ABCDE</a>
+            </div>
         </div>
 
         <div class="row">
@@ -36,20 +39,13 @@
                 <h2 style="text-align: center;">Hizmetler</h2>
                 <hr style="height: 2px; background-color: rgb(255, 255, 255); width: 80%; margin-bottom: 40px;">
 
-
-                <div class="link" style="text-align: center; display: block;">
-                    <a href="" onclick="menu(event)"><i style=" padding-left: 0px !important;"
-                            class="bi bi-three-dots"></i></a>
-                </div>
-
-
                 <div class="link">
                     <i id="icon-bohçalama" class="bi bi-dash"></i>
                     <a class="">Temel Bohçalama</a>
                 </div>
 
                 <div class="link" onclick="subM('çatı-sub', 'icon-çatı')">
-                    <i id="icon-çatı" class="bi bi-chevron-down"></i>
+                    <i id="icon-çatı" class="bi bi-chevron-up"></i>
                     <a class="">Çatı Sistemleri</a>
                 </div>
                 <div id="çatı-sub" class="sub">
@@ -95,37 +91,6 @@
             </div>
         </div>
         <script src="script.js"> </script>
-        <script>
-            function menu(event) {
-                // Engelleme için event.preventDefault() kullanılıyor
-                event.preventDefault();
-
-                var menu = document.getElementById("left");
-                var content = document.getElementById("right");
-                var space = document.getElementById("space");
-                var hb = document.getElementById("hb");
-
-                // Parse the width value as a float
-                var currentWidth = parseFloat(menu.style.width);
-
-                // Check if the menu is currently open (width is 20%)
-                if (currentWidth === 20) {
-                    // If open, close the menu by setting widths accordingly
-                    hb.style.display = "block";
-                    menu.style.display = "none";
-                    menu.style.width = "0%";
-                    space.style.width = "0%";
-                    content.style.width = "100%";
-                } else {
-                    // If closed, open the menu by setting widths accordingly
-                    hb.style.display = "none";
-                    menu.style.display = "block";
-                    menu.style.width = "20%";
-                    space.style.width = "1%";
-                    content.style.width = "79%";
-                }
-            }
-        </script>
     </div>
 </body>
 
