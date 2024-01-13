@@ -6,7 +6,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(20, 20, 20);
     color: white;
-    margin-right: -17px;
 }
 
 .container {
@@ -188,12 +187,12 @@ p {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
     body {
-        background-color: blue;
+        background-color: blueviolet;
     }
     .bar-link {
-        font-size: 18px !important;
+        font-size: 16px !important;
     }
     .bar-link-div {
         margin-top: 0px;
