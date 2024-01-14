@@ -53,3 +53,29 @@ function menu(event) {
         }
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".slider");
+    let count = 0;
+
+    function nextSlide() {
+        count++;
+        if (count === slider.children.length) {
+            count = 0;
+        }
+        updateSlider();
+    }
+
+    function prevSlide() {
+        count--;
+        if (count < 0) {
+            count = slider.children.length - 1;
+        }
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const transformValue = -count * 100 + "%";
+        slider.style.transform = `translateX(${transformValue})`;
+    }
+});
