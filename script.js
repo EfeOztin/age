@@ -1,81 +1,68 @@
-function subM(submenuId, iconId) {
-    var submenu = document.getElementById(submenuId);
-    var icon = document.getElementById(iconId);
-    if (submenu.style.display === "none" || submenu.style.display === "") {
-        submenu.style.display = "block";
-        icon.classList.remove("bi-chevron-up");
-        icon.classList.add("bi-chevron-down");
-    } else {
-        submenu.style.display = "none";
-        icon.classList.remove("bi-chevron-down");
-        icon.classList.add("bi-chevron-up");
-    }
+var bohcaImage = ["images/i/bohçalama.jpg", "images/i/bohçalama-2.jpg"];
+var catiImage = ["images/i/çatı-sistemleri.jpg", "images/i/çatı-sistemleri-2.jpg", "images/i/çatı-sistemleri-3.jpg"];
+var ıslakImage = ["images/i/ıslak-hacim.jpg", "images/i/ıslak-hacim-2.jpg", "images/i/ıslak-hacim-3.jpg"];
+var terasImage = ["images/i/poliüretan-teras.jpg", "images/i/poliüretan-teras-2.jpg"];
+var perdeImage = ["images/i/temel-perde.jpg", "images/i/temel-perde-2.jpg"];
+
+var bohcaIndex = 0;
+var catiIndex = 0;
+var ıslakIndex = 0;
+var terasIndex = 0;
+var perdeIndex = 0;
+
+function bohca() {
+    bohcaIndex = (bohcaIndex + 1) % bohcaImage.length;
+    var image = document.getElementById("bohça");
+    image.style.opacity = "0.4";
+    setTimeout(function () {
+        image.src = bohcaImage[bohcaIndex];
+        image.style.opacity = "1";
+    }, 500);
 }
 
-function menu(event) {
-    // Engelleme için event.preventDefault() kullanılıyor
-    event.preventDefault();
-
-    var menu = document.getElementById("left");
-    var content = document.getElementById("right");
-    var space = document.getElementById("space");
-    var isMobile = window.matchMedia("(max-width: 800px)").matches;
-    // Parse the width value as a float
-    var currentWidth = parseFloat(menu.style.width);
-    if (isMobile) { 
-        if (currentWidth === 100) {
-            // If open, close the menu by setting widths accordingly
-            menu.style.display = "none";
-            menu.style.width = "0%";
-            space.style.width = "0%";
-            content.style.width = "100%";
-        } else {
-            // If closed, open the menu by setting widths accordingly
-            menu.style.display = "block";
-            menu.style.width = "100%";
-            space.style.width = "0%";
-            content.style.width = "0%";
-        }
-    } else {
-        // Check if the menu is currently open (width is 20%)
-        if (currentWidth === 20) {
-            // If open, close the menu by setting widths accordingly
-            menu.style.display = "none";
-            menu.style.width = "0%";
-            space.style.width = "0%";
-            content.style.width = "100%";
-        } else {
-            // If closed, open the menu by setting widths accordingly
-            menu.style.display = "block";
-            menu.style.width = "20%";
-            space.style.width = "1%";
-            content.style.width = "79%";
-        }
-    }
+function cati() {
+    catiIndex = (catiIndex + 1) % catiImage.length;
+    var image = document.getElementById("çatı");
+    image.style.opacity = "0.4";
+    setTimeout(function () {
+        image.src = catiImage[catiIndex];
+        image.style.opacity = "1";
+    }, 500);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector(".slider");
-    let count = 0;
+function islak() {
+    ıslakIndex = (ıslakIndex + 1) % ıslakImage.length;
+    var image = document.getElementById("ıslak");
+    image.style.opacity = "0.4";
+    setTimeout(function () {
+        image.src = ıslakImage[ıslakIndex];
+        image.style.opacity = "1";
+    }, 500);
+}
 
-    function nextSlide() {
-        count++;
-        if (count === slider.children.length) {
-            count = 0;
-        }
-        updateSlider();
-    }
+function teras() {
+    terasIndex = (terasIndex + 1) % terasImage.length;
+    var image = document.getElementById("teras");
+    image.style.opacity = "0.4";
+    setTimeout(function () {
+        image.src = terasImage[terasIndex];
+        image.style.opacity = "1";
+    }, 500);
+}
 
-    function prevSlide() {
-        count--;
-        if (count < 0) {
-            count = slider.children.length - 1;
-        }
-        updateSlider();
-    }
+function perde() {
+    perdeIndex = (perdeIndex + 1) % perdeImage.length;
+    var image = document.getElementById("perde");
+    image.style.opacity = "0.4";
+    setTimeout(function () {
+        image.src = perdeImage[perdeIndex];
+        image.style.opacity = "1";
+    }, 500);
+}
 
-    function updateSlider() {
-        const transformValue = -count * 100 + "%";
-        slider.style.transform = `translateX(${transformValue})`;
-    }
-});
+
+setInterval(islak, 5000);
+setInterval(cati, 5200);
+setInterval(bohca, 4600);
+setInterval(perde, 4800);
+setInterval(teras, 5400);
